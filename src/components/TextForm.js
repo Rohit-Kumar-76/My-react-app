@@ -25,11 +25,11 @@ export default function TextForm(props) {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
     }
-    const handleSymbol = () => {
+
+    const handleSmbol = () => {
         let newText = text.replace(/[^\w\s:]/g, "");
         setText(newText);
     };
-
 
 
 
