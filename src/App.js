@@ -21,7 +21,6 @@ function App() {
     <>
 
       <div className='container  mb-2 pb-1'>
-        {/* <Navbar title="textUtils " aboutus="About Us" mode={mode} /> */}
         <Navbar title="textUtils" mode={mode} toggleMode={toggleMode} />
         <div className='container my-3'>
           <TextForm heading="Enter Your Text Here" />

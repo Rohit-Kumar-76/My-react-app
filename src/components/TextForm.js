@@ -26,11 +26,10 @@ export default function TextForm(props) {
         setText(newText.join(" "))
     }
 
-    const handleSmbol = () => {
+    const handleSymbol = () => {
         let newText = text.replace(/[^\w\s:]/g, "");
         setText(newText);
     };
-
 
 
     const [text, setText] = useState('');
@@ -46,9 +45,9 @@ export default function TextForm(props) {
                     <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleUpclick}>Convert Upper</button>
                     <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleLowclick}>Convert Lower</button>
                     <button className='btn btn-primary  p-1 m-1 mx-2' onClick={reset}>Reset </button>
-                    <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleCopy}>Copy Text</button>
                     <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-                    <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleSmbol}>Remove Symbols</button>
+                    <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleCopy}>Copy Text</button>
+                    <button className='btn btn-primary  p-1 m-1 mx-2' onClick={handleSymbol}>Remove Symbols</button>
                 </div>
             </div>
             <div className='container my-2 mt-5 ' >
