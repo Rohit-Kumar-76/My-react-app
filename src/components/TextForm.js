@@ -60,7 +60,7 @@ export default function TextForm(props) {
             <div>
                 <hr />
                 <h2 className='text-center'>Preview Paragraph</h2>
-                <p className='pb-1 text-center border p-1 border-lg'>{text}</p>
+                <pre className='pb-1 text-center border p-1 border-lg'>{text}</pre>
             </div>
         </>
 
