@@ -3,13 +3,16 @@ export default function TextForm(props) {
     const handleUpclick = () => {
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to Upper Case", "success");
     }
     const handleLowclick = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to Lower Case", "success");
     }
     const reset = () => {
         setText(" ");
+        props.showAlert("Field Reset Successfully", "success");
     }
 
     const handleOnChange = (event) => {
@@ -19,16 +22,19 @@ export default function TextForm(props) {
         var text = document.getElementById('mybox');
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("All text Coppied Successfully", "success");
     }
 
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
-        setText(newText.join(" "))
+        setText(newText.join(" "));
+        props.showAlert("All Extra Spaces have removed", "success");
     }
 
     const handleSymbol = () => {
         let newText = text.replace(/[^\w\s:]/g, "");
         setText(newText);
+        props.showAlert("All Special Symbols have removed", "success");
     };
 
 
